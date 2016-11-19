@@ -66,7 +66,7 @@ world(World) :-
 world([]).
 
 
-%  each with probability 0.1, a new junk item appears in at most M random locations on the 10x10 grid
+% each with probability 0.1, a new junk item appears in at most M random locations on the 10x10 grid
 
 new_events(0).
 
@@ -142,3 +142,7 @@ observe(move(_,_), at(X,Y)) :-
 
 observe(pickup(_,_), cleaned(X,Y)) :-
 	retract(cleaned(X,Y)).
+
+
+
+
