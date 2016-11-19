@@ -1,0 +1,2 @@
+:- style_check(-singleton).
+:- ['gridworld.pro', 'agent.pro'].
