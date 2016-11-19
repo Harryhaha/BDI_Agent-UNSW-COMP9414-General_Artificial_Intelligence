@@ -3,13 +3,14 @@ implement the basic functions of a simple BDI Agent that operates in a Gridworld
 
 
 
+
 # Gridworld
 The Gridworld consists of a two-dimensional grid of locations, extending to infinity in both directions. Some locations contain "junk" which the agent must "clean up" in order to score points. An agent cleans up a piece of junk by moving to its location and executing a pickup action. Agents can move one square at a time either horizontally or vertically. The world is dynamic in that junk may spontaneously appear at randomly determined locations at any time, though there is never more than one item of junk in the same location.
 
 
-##gridworld.pro## implements a system for conducting an experimental trial consisting of one agent in the Gridworld that repeatedly executes the BDI interpretation cycle for 20 iterations (this is a deliberately small number for ease of writing and debugging the program). The initial state of the world is always that there is no junk and the agent is at the location (0,0). 
+“gridworld.pro” implements a system for conducting an experimental trial consisting of one agent in the Gridworld that repeatedly executes the BDI interpretation cycle for 20 iterations (this is a deliberately small number for ease of writing and debugging the program). The initial state of the world is always that there is no junk and the agent is at the location (0,0). 
 
-##agent.pro## is the important methods' implementations
+“agent.pro” is the important methods' implementations
 
 The agent's beliefs at any time simply consist of a list containing one term of the form at(X,Y) representing the current location of the agent. The agent's beliefs are always correct (i.e. if the agent "thinks" it is at location (3,4) then it is at location (3,4)). Hence the initial belief state of the agent is represented by the list [at(0,0)].
 
@@ -20,6 +21,7 @@ Each plan is a list of actions. To fulfil an intention, the agent executes the p
 In each cycle the agent executes one action; there are two types of action the agent can execute:
    pickup(X,Y) - the agent picks up the junk at (X,Y) and scores the associated points
    move(X,Y)   -   the agent moves to the location (X,Y)
+
 
 
 
